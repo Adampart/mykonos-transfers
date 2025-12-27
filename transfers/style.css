@@ -1,0 +1,269 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+/* Βασικό χρώμα φόντου όπως στο site που έστειλες */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #edf5ff; /* Ανοιχτό γαλάζιο */
+}
+
+/* --- Header / Μενού --- */
+header {
+    background-color: #000; /* Μαύρη μπάρα */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    header .logo {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    header nav a {
+        color: #edf5ff;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: color 0.3s;
+    }
+
+        header nav a:hover {
+            color: #2a77ca;
+        }
+
+.nav-btn {
+    border: 1px solid #2a77ca;
+    padding: 8px 15px;
+    border-radius: 3px;
+    color: #2a77ca !important;
+}
+
+    .nav-btn:hover {
+        background-color: #2a77ca;
+        color: white !important;
+    }
+
+/* --- SLIDESHOW (Το Πλαίσιο που ζήτησες) --- */
+.slideshow-container {
+    position: relative;
+    max-width: 1100px; /* ΠΛΑΤΟΣ: Δεν πιάνει όλη την οθόνη πια */
+    height: 550px; /* ΥΨΟΣ: Πιο μαζεμένο */
+    margin: 40px auto; /* ΚΕΝΤΡΑΡΙΣΜΑ: μπαίνει στη μέση με κενό γύρω-γύρω */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Σκιά για να ξεχωρίζει */
+    border-radius: 5px; /* Ελαφρώς στρογγυλεμένες γωνίες */
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Οι εικόνες */
+.mySlides {
+    display: none;
+    height: 100%;
+}
+
+    .mySlides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Κόβει την εικόνα σωστά για να μην παραμορφώνεται */
+    }
+
+/* --- Κείμενα πάνω στο Slider --- */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Το κείμενο ξεκινάει από αριστερά, όπως στο site */
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* Έντονη σκιά για να διαβάζεται */
+    text-align: left;
+    max-width: 500px;
+}
+
+    .hero-text h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 42px;
+        margin: 0 0 10px 0;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+/* Κουμπί πάνω στην εικόνα */
+.hero-btn {
+    background-color: #2a77ca;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+    .hero-btn:hover {
+        background-color: #1e5a9c;
+    }
+
+/* --- Βελάκια (Arrows) --- */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3); /* Λίγο μαύρο φόντο για να φαίνονται */
+    border-radius: 3px;
+}
+
+.next {
+    right: 10px;
+}
+/* Το δεξί βελάκι */
+.prev {
+    left: 10px;
+}
+    /* Το αριστερό βελάκι */
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* --- Footer --- */
+footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+/* --- About Section (DARK MODE) --- */
+.about-section {
+    background-color: #000000; /* ΜΑΥΡΟ ΦΟΝΤΟ */
+    color: #e0e0e0; /* Ανοιχτό γκρι γράμματα για να διαβάζονται */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: -5px;
+    border-top: 2px solid #2a77ca; /* Μια μπλε γραμμή για διαχωρισμό */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    color: #ffffff; /* Λευκός τίτλος */
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-section .intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc; /* Λίγο πιο σκούρο γκρι για το κείμενο */
+    margin-bottom: 50px;
+}
+
+/* Πλέγμα με τα χαρακτηριστικά */
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.feature-box {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: #111111; /* Πολύ σκούρο γκρι για τα κουτάκια */
+    border-radius: 5px;
+    border: 1px solid #333; /* Λεπτό περίγραμμα */
+}
+
+    .feature-box i {
+        font-size: 40px;
+        color: #2a77ca; /* Το μπλε της εταιρείας */
+        margin-bottom: 15px;
+    }
+
+    .feature-box h3 {
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff; /* Λευκός τίτλος */
+        margin-bottom: 10px;
+    }
+
+/* Παρουσίαση Στόλου (Fleet) */
+.fleet-section {
+    background-color: #0a0a0a; /* Σχεδόν μαύρο */
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #333; /* Λεπτό γκρι περίγραμμα */
+}
+
+    .fleet-section h3 {
+        font-size: 28px;
+        color: #2a77ca; /* Μπλε τίτλος */
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+.fleet-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+    .fleet-list li {
+        padding: 15px 0;
+        border-bottom: 1px solid #333; /* Σκούρα γραμμή χωρίσματος */
+        font-size: 17px;
+        color: #bbb;
+    }
+
+        .fleet-list li:last-child {
+            border-bottom: none;
+        }
+
+    .fleet-list strong {
+        color: #ffffff; /* Λευκό όνομα αυτοκινήτου */
+        font-size: 19px;
+        margin-right: 10px;
+    }

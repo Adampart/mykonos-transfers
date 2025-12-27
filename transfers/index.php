@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mykonos Transfers - VIP Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">MYKONOS TRANSFERS</div>
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="#">Fleet</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="booking.php" class="nav-btn">BOOK NOW</a>
+        </nav>
+    </header>
+
+    <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+            <img src="images/slide1.jpg">
+            <div class="hero-text">
+                <h1>Welcome to Mykonos Transfers</h1>
+                <p>Luxury that moves you!</p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/slide2.jpg">
+            <div class="hero-text">
+                <h1>Experience the Best</h1>
+                <p>VIP Chauffeur Services available exclusively for you.</p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/slide3.jpg">
+            <div class="hero-text">
+                <h1>Ready to Experience?</h1>
+                <p>Book your transfer today.</p>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>Your Premier Partner in Mykonos</h2>
+            <p class="intro">
+                Discover the magic of Mykonos with the island's most reliable and luxurious transportation service. 
+                Born from a deep passion for hospitality and a love for this beautiful island, our company is dedicated 
+                to making your vacation unforgettable.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-user-tie"></i> <h3>Professional & Polite</h3>
+                    <p>Our chauffeurs are highly trained, discreet, and always polite. We believe that true luxury lies in exceptional service and a warm smile.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-clock"></i> <h3>Fast & Punctual</h3>
+                    <p>We value your time. Whether it's an airport pickup or a dinner reservation, we ensure you arrive safely and on time, every time.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-star"></i> <h3>VIP Privileges</h3>
+                    <p>Experience the island like a true VIP. From private tours to exclusive transfer arrangements, we cater to your every need.</p>
+                </div>
+            </div>
+
+            <div class="fleet-section">
+                <h3>Our Exclusive Fleet</h3>
+                <p>Travel in absolute comfort with our immaculate, high-end vehicles:</p>
+                
+                <ul class="fleet-list">
+                    <li>
+                        <strong>Mercedes V-Class:</strong> 
+                        The ultimate choice for groups and families. Spacious, stylish, and perfect for exploring the island in comfort.
+                    </li>
+                    <li>
+                        <strong>Mercedes S-Class:</strong> 
+                        The definition of elegance. A true limousine experience for those who demand the highest standard of luxury.
+                    </li>
+                    <li>
+                        <strong>Range Rover:</strong> 
+                        Powerful and sophisticated. Make a statement with this stunning SUV that combines performance with VIP style.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Mykonos Transfers &copy; 2025</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) { showSlides(slideIndex += n); }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+
+</body>
+</html>
